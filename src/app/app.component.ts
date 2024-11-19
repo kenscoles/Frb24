@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component'
 import {MatButtonModule} from '@angular/material/button'
@@ -13,8 +13,24 @@ import { sum } from './util';
 })
 export class AppComponent {
   title = 'Frb24';
+  public screenWidth = 0;
+  public screenHeight = 0;
   count=0;
   value = signal(this.count+4)
+  ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
+  @HostListener('window:resize', ['$event'])
+
+  onResize(event: any) {
+
+    this.screenWidth = window.innerWidth;
+
+    this.screenHeight = window.innerHeight;
+
+  }
+
 
   inc(){
     this.count +=1
