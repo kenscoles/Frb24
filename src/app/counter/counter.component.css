@@ -1,4 +1,17 @@
+
 .col {
-    background-color: green;
-    color: rgb(214, 201, 17);
-  }
+ 
+  background-color: green;
+  color: rgb(214, 201, 17);
+}
+
+.test {
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+}
+button {
+  background-color: var(--white);
+  color: var(--red);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}

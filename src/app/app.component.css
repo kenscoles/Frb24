@@ -1,4 +1,11 @@
 img {
     border: 5px solid #555;
-    width: 22%;
+    width: 32%;
   }
+  div {
+    background-color: cornflowerblue;
+    display: block;
+    width: var(--size);
+    margin: 10px;
+  }
+  

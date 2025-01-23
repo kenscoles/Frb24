@@ -1,18 +1,22 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, VERSION, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component'
 import {MatButtonModule} from '@angular/material/button'
 import { sum } from './util';
+import { HelloComponent } from './hello/hello.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ CounterComponent, MatButtonModule],
+  imports: [ CounterComponent, HelloComponent, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
+  rects = ['100%', '50%', '25%'];
   title = 'Frb24';
+  name = this.title + ' Angular ' + VERSION.major;
   public screenWidth = 0;
   public screenHeight = 0;
   count=0;
