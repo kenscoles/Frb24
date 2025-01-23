@@ -6,11 +6,10 @@ import { sum } from './util';
 import { HelloComponent } from './hello/hello.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [ CounterComponent, HelloComponent, MatButtonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [CounterComponent, HelloComponent, MatButtonModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   
